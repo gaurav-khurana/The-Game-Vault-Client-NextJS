@@ -32,6 +32,7 @@
     &__title {
       @include desktop {
         text-align: center;
+        margin-bottom: $padding-big;
       }
     }
   }
@@ -56,11 +57,20 @@
       color: $color-primary-white;
       line-height: 40px;
       font-weight: 500;
+
+      @include desktop {
+        margin-bottom: $padding-big;
+      }
     }
 
     &__title {
       color: $color-primary-white;
       width: 28rem;
+
+      @include desktop {
+        width: 51rem;
+        margin-bottom: $padding-big;
+      }
     }
   }
 
@@ -87,11 +97,19 @@
       color: $color-primary-white;
       line-height: 40px;
       font-weight: 500;
+
+      @include desktop {
+        margin-bottom: $padding-big;
+      }
     }
 
     &__title {
       color: $color-primary-white;
       //   width: 10rem;
+
+      @include desktop {
+        margin-bottom: $padding-small;
+      }
     }
 
     &__radio {
@@ -102,6 +120,10 @@
 
       &:checked {
         accent-color: $color-primary-green; // for xbox
+      }
+
+      @include desktop {
+        margin-right: $padding-big;
       }
     }
 
@@ -219,13 +241,24 @@
   &-gallery {
     @include flexbox(column, center, center);
 
-    // @include desktop {
-    //   width: 100vw;
-    //   height: 60rem;
-    //   &-image {
-    //     object-fit: contain;
-    //   }
-    // }
+    @include desktop {
+      width: 100vw;
+      // height: 60rem;
+
+      @include flexbox(row, space-evenly, flex-start);
+      flex-wrap: wrap;
+
+      &__image {
+        width: 49vw;
+        height: 50rem; // cn gv height with cover
+        object-fit: contain; // doesnt need height
+        object-fit: cover;
+
+        margin-bottom: $padding-small;
+        // transform: scale(0.8);
+        // zoom: 75%;
+      }
+    }
   }
 
   &-carousel {

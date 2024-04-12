@@ -43,6 +43,12 @@ function CheckoutPage() {
   return (
     <>
       <main className="checkout">
+        <section className="checkout__logo-container">
+          <Link href="/">
+            <h2 className="checkout__logo">[G]</h2>
+          </Link>
+        </section>
+
         <h2 className="checkout__title">Checkout</h2>
 
         <section className="checkout-container">

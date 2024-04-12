@@ -70,12 +70,15 @@ function XboxProductDetailsPage(params) {
             <section className="xbox-game-about">
               <div className="xbox-game-about-container">
                 <h3 className="xbox-game-about__subtitle">Compatibility</h3>
+
                 <h2 className="xbox-game-about__title">
                   {singleGame.platform}
                 </h2>
               </div>
+
               <div className="xbox-game-about-container">
                 <h3 className="xbox-game-about__subtitle">About the game</h3>
+
                 <h2 className="xbox-game-about__title">{singleGame.genre}</h2>
               </div>
             </section>
@@ -201,35 +204,35 @@ function XboxProductDetailsPage(params) {
 
             <section className="xbox-game-gallery">
               <Image
-                className="xbox-game-hero__image"
+                className="xbox-game-gallery__image"
                 src={singleGame.image2}
                 alt={`image for ${singleGame.title}`}
                 width={390}
                 height={400}
               />
               <Image
-                className="xbox-game-hero__image"
+                className="xbox-game-gallery__image"
                 src={singleGame.image3}
                 alt={`image for ${singleGame.title}`}
                 width={390}
                 height={400}
               />
               <Image
-                className="xbox-game-hero__image"
+                className="xbox-game-gallery__image"
                 src={singleGame.image4}
                 alt={`image for ${singleGame.title}`}
                 width={390}
                 height={400}
               />
               <Image
-                className="xbox-game-hero__image"
+                className="xbox-game-gallery__image"
                 src={singleGame.image5}
                 alt={`image for ${singleGame.title}`}
                 width={390}
                 height={400}
               />
               <Image
-                className="xbox-game-hero__image"
+                className="xbox-game-gallery__image"
                 src={singleGame.image1}
                 alt={`image for ${singleGame.title}`}
                 width={390}

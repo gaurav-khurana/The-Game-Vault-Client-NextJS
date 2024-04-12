@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import ControlledCarousel from "../../../components/carousel/Carousel";
 import Image from "next/image";
 import Link from "next/link";
+import GameCarousel from "../../../components/carousel/Carousel";
 
 function PlaystationProductDetailsPage({ params }) {
   // state to set all games
@@ -209,7 +210,7 @@ function PlaystationProductDetailsPage({ params }) {
             <section className="ps-game-gallery">
               {/* <img */}
               <Image
-                className="ps-game-hero__image"
+                className="ps-game-gallery__image"
                 src={singleGame.image2}
                 alt={`image for ${singleGame.title}`}
                 width={390}
@@ -217,7 +218,7 @@ function PlaystationProductDetailsPage({ params }) {
               />
               {/* <img */}
               <Image
-                className="ps-game-hero__image"
+                className="ps-game-gallery__image"
                 src={singleGame.image3}
                 alt={`image for ${singleGame.title}`}
                 width={390}
@@ -225,7 +226,7 @@ function PlaystationProductDetailsPage({ params }) {
               />
               {/* <img */}
               <Image
-                className="ps-game-hero__image"
+                className="ps-game-gallery__image"
                 src={singleGame.image4}
                 alt={`image for ${singleGame.title}`}
                 width={390}
@@ -233,7 +234,7 @@ function PlaystationProductDetailsPage({ params }) {
               />
               {/* <img */}
               <Image
-                className="ps-game-hero__image"
+                className="ps-game-gallery__image"
                 src={singleGame.image5}
                 alt={`image for ${singleGame.title}`}
                 width={390}
@@ -241,7 +242,7 @@ function PlaystationProductDetailsPage({ params }) {
               />
               {/* <img */}
               <Image
-                className="ps-game-hero__image"
+                className="ps-game-gallery__image"
                 src={singleGame.image1}
                 alt={`image for ${singleGame.title}`}
                 width={390}
@@ -249,9 +250,9 @@ function PlaystationProductDetailsPage({ params }) {
               />
             </section>
 
-            {/* <section className="ps-game-carousel">
-              <ControlledCarousel singleGame={singleGame} />
-            </section> */}
+            <section className="ps-game-carousel">
+              <GameCarousel singleGame={singleGame} />
+            </section>
           </section>
         </main>
       </>
