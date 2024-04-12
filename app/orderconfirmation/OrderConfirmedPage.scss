@@ -1,0 +1,36 @@
+@use "../styles//partials/global";
+@use "../styles//partials/typography";
+@use "../styles//partials/mixins" as *;
+@use "../styles//partials/variables" as *;
+
+.confirmation {
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-secondary-black;
+  //   paddin
+
+  @include flexbox(column, flex-start, flex-start);
+
+  &-container {
+    width: 65vw;
+    height: 50vh;
+    margin-inline: auto;
+    @include flexbox(column, space-evenly, center);
+  }
+
+  &__title {
+    color: $color-primary-white;
+  }
+
+  &__text {
+    color: $color-primary-white;
+  }
+
+  &__btn {
+    width: 60vw;
+    height: 5rem;
+    background-color: $color-secondary-dark-grey;
+    color: $color-primary-green;
+    border: $divider-width solid $color-primary-green;
+  }
+}
