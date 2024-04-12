@@ -1,0 +1,238 @@
+@use "../../../styles//partials/global";
+@use "../../../styles//partials/typography";
+@use "../../../styles//partials/mixins" as *;
+@use "../../../styles//partials/variables" as *;
+
+.xbox-game {
+  width: 100vw;
+  background-color: $color-secondary-black;
+
+  &-container {
+    @include desktop {
+      @include flexbox(row, space-between, center);
+      @include flexbox(row, flex-start, center);
+      flex-wrap: wrap;
+    }
+  }
+
+  &-header {
+    color: $color-primary-white;
+    margin-left: 2.8rem;
+
+    &__logo {
+      color: $color-primary-white;
+      padding-top: 3.3rem;
+
+      @include desktop {
+        padding-top: 4.4rem;
+        margin-left: 4.4rem;
+      }
+    }
+
+    &__title {
+      @include desktop {
+        text-align: center;
+      }
+    }
+  }
+
+  &-about {
+    background-color: $color-secondary-dark-grey;
+    padding: 3.6rem 0;
+    margin-bottom: $spacing-small;
+
+    @include desktop {
+      width: 49vw;
+      height: 40rem;
+      margin-right: $spacing-small;
+    }
+
+    &-container {
+      height: 15rem;
+      margin-left: 2.8rem;
+    }
+
+    &__subtitle {
+      color: $color-primary-white;
+      line-height: 40px;
+      font-weight: 500;
+    }
+
+    &__title {
+      color: $color-primary-white;
+      width: 28rem;
+    }
+  }
+
+  &-price {
+    background-color: $color-secondary-dark-grey;
+    padding: 3.6rem 0;
+    margin-bottom: $spacing-small;
+
+    @include desktop {
+      width: 49vw;
+      height: 40rem;
+      // margin-right: $spacing-small;
+    }
+
+    &-container {
+      //   height: 15rem;
+      margin-left: 2.8rem;
+      margin-bottom: 2.8rem;
+
+      @include flexbox(column, flex-start, flex-start);
+    }
+
+    &__subtitle {
+      color: $color-primary-white;
+      line-height: 40px;
+      font-weight: 500;
+    }
+
+    &__title {
+      color: $color-primary-white;
+      //   width: 10rem;
+    }
+
+    &__radio {
+      height: 20px;
+      width: 20px;
+      margin-right: $spacing-small;
+      // accent-color: $color-primary-green; // for xbox
+
+      &:checked {
+        accent-color: $color-primary-green; // for xbox
+      }
+    }
+
+    &__button {
+      width: 90vw;
+      height: 6rem;
+      background-color: $color-primary-green;
+      margin-inline: auto;
+
+      @include flexbox(row, center, center);
+
+      @include desktop {
+        width: 45vw;
+      }
+
+      &-icon {
+        margin-right: 10px;
+      }
+      &-subtitle {
+        color: $color-secondary-black;
+        margin-bottom: 0;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &-hero {
+    margin-bottom: $spacing-small;
+
+    @include flexbox(row, center, center);
+
+    @include desktop {
+      width: 90vw;
+      margin-inline: auto;
+      padding: $padding-big 0;
+    }
+
+    &__image {
+      width: 90vw;
+      height: 45rem;
+      border-radius: $image-radius;
+      object-fit: cover;
+      object-position: 60%;
+      margin-bottom: $spacing-small;
+
+      @include desktop {
+        height: 65vh;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &-capabilities {
+    background-color: $color-secondary-dark-grey;
+    margin-bottom: $spacing-small;
+    padding: 2.8rem;
+
+    @include flexbox(column, center, flex-start);
+
+    &-container {
+      @include desktop {
+        @include flexbox(row, flex-start, flex-start);
+        flex-wrap: wrap;
+        // width: 50vw;
+      }
+    }
+
+    &__title {
+      color: $color-primary-white;
+      margin-bottom: $image-radius;
+    }
+
+    &__text {
+      width: 80vw;
+      background-color: $color-primary-blue;
+      color: $color-primary-white;
+      margin-bottom: $image-radius;
+      padding: $padding-small $padding-big;
+
+      @include desktop {
+        width: 32vw;
+        margin-right: 4rem;
+      }
+
+      &--small {
+        width: 35vw;
+        height: 10rem;
+        margin-right: 10vw;
+
+        @include desktop {
+          width: 20vw;
+        }
+      }
+
+      &-container {
+        @include flexbox(row, space-between, center);
+      }
+    }
+  }
+
+  &-description {
+    background-color: $color-secondary-dark-grey;
+    margin-bottom: $spacing-small;
+    padding: 2.8rem;
+
+    &__title {
+      color: $color-primary-white;
+      margin-bottom: $padding-big;
+    }
+    &__text {
+      color: $color-primary-white;
+    }
+  }
+
+  &-gallery {
+    @include flexbox(column, center, center);
+
+    // @include desktop {
+    //   width: 100vw;
+    //   height: 60rem;
+    //   &-image {
+    //     object-fit: contain;
+    //   }
+    // }
+  }
+
+  &-carousel {
+    @include flexbox(row, center, center);
+  }
+}
+
+// a {
+//   text-decoration: none;
+// }
