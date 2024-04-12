@@ -1,0 +1,122 @@
+@use "../../styles/partials/global";
+@use "../../styles/partials/typography";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+// .hero-image {
+//   background: rgb(23, 102, 255);
+//   background: linear-gradient(
+//     0deg,
+//     rgba(23, 102, 255, 1) 5%,
+//     rgba(13, 17, 23, 1) 97%
+//   );
+// }
+
+.ps {
+  width: 100vw;
+  background-color: $color-secondary-black;
+  overflow-x: hidden;
+
+  @include desktop {
+    // padding: 6.4rem;
+    overflow-x: hidden;
+  }
+
+  &-hero {
+    background: linear-gradient(
+      0deg,
+      rgba(23, 102, 255, 1) 5%,
+      rgba(13, 17, 23, 1) 97%
+    );
+    border-radius: 16px;
+
+    @include desktop {
+      height: 82vh;
+      margin-inline: 6.4rem;
+      // padding-inline: 3.2rem;
+    }
+
+    &__logo {
+      color: $color-primary-white;
+      padding-top: 3.3rem;
+      margin-left: 2.8rem;
+      cursor: pointer;
+
+      @include desktop {
+        padding-top: 3rem;
+        // margin-left: 7rem;
+      }
+    }
+
+    &__title {
+      color: $color-primary-white;
+      margin-left: 2.8rem;
+
+      @include desktop {
+        margin-left: 14rem;
+        margin-top: 10rem;
+      }
+    }
+
+    &__image {
+      width: 602px;
+      height: 617px;
+      rotate: -23.79deg;
+
+      @include desktop {
+        // width: 887px;
+        // height: 910px;
+        // margin-left: 30vw;
+        // margin-bottom: 50rem;
+        position: relative;
+        top: -250px;
+        left: 40vw;
+        left: 45vw;
+      }
+    }
+  }
+
+  &-icons-container {
+    height: 13rem;
+
+    @include flexbox(row, center, center);
+
+    @include desktop {
+      margin-inline: 6.4rem;
+
+      @include flexbox(row, flex-start, center);
+    }
+  }
+
+  &-icons-group {
+    width: 34rem;
+    height: 2rem;
+
+    @include flexbox(row, space-between, center);
+  }
+
+  &-icon {
+    &-container {
+      width: 10.2rem;
+      height: 2.1rem;
+
+      @include flexbox(row, space-evenly, center);
+    }
+
+    // &__image {
+    // }
+
+    &__text {
+      color: $color-primary-blue;
+      margin-bottom: 0;
+    }
+  }
+
+  &-titles-container {
+    @include desktop {
+      // width: 99vw;
+      @include flexbox(row, flex-start, flex-start);
+      flex-wrap: wrap;
+    }
+  }
+}
