@@ -1,0 +1,56 @@
+@use "../../styles/partials/global";
+@use "../../styles/partials/typography";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.gamecard {
+  width: 100vw;
+  height: 40rem;
+  margin-bottom: $spacing-small;
+
+  @include desktop {
+    // @include flexbox (row, flex)
+    width: 50vw;
+    width: 49.3vw;
+    // margin-right: $spacing-small;
+    &:nth-child(odd) {
+      margin-right: $spacing-small;
+    }
+  }
+
+  &__image {
+    width: 100vw;
+    height: 40rem;
+    object-fit: cover;
+    object-position: 50%;
+    object-position: 60%;
+    background: linear-gradient(
+      179.94deg,
+      rgba(0, 0, 0, 0) 69.85%,
+      #212932 93.92%
+    );
+
+    @include desktop {
+      width: 50vw;
+      width: 49.3vw;
+    }
+  }
+
+  &__title {
+    height: 4rem;
+    color: $color-primary-white;
+    text-align: center;
+    position: relative;
+    bottom: 40px;
+    // backup opt if gradient doesnt work
+    background-color: rgba(33, 41, 50, 0.5);
+    cursor: pointer;
+
+    @include desktop {
+      // @include flexbox (row, flex)
+      width: 50vw;
+      width: 49.3vw;
+      // margin-right: $spacing-small;
+    }
+  }
+}
