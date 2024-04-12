@@ -1,6 +1,6 @@
 // import { Link } from "react-router-dom";
 import Link from "next/link";
-import "./OrderConfirmedPage.scss";
+import "./orderconfirmedpage.scss";
 
 function OrderConfirmedPage() {
   return (

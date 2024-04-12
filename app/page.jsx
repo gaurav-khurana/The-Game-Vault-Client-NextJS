@@ -1,7 +1,7 @@
 // import Image from "next/image";
 import HomePage from "./homepage/page";
-import NavigationPage from "./menu/page";
-import styles from "./page.module.css";
+// import NavigationPage from "./menu/page";
+// import styles from "./page.module.css";
 import Link from "next/link";
 
 export default function Home() {

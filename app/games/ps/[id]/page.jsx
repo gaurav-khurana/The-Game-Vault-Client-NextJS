@@ -1,10 +1,10 @@
 "use client";
-import "./PlaystationProductDetailsPage.scss";
+import "./playstationproductdetailspage.scss";
 import Cart from "../../../assets/icons/cart.svg";
 import axios from "axios";
 import { useEffect, useState } from "react";
 // import { Link, useParams } from "react-router-dom";
-import ControlledCarousel from "../../../components/Carousel/Carousel";
+import ControlledCarousel from "../../../components/carousel/Carousel";
 import Image from "next/image";
 import Link from "next/link";
 

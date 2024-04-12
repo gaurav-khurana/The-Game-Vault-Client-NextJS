@@ -1,11 +1,11 @@
 "use client";
-import "./XboxProductDetailsPage.scss";
+import "./xboxproductdetailspage.scss";
 import Cart from "../../../assets/icons/cart.svg";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import GameCarousel from "@/app/components/Carousel/Carousel";
+import GameCarousel from "@/app/components/carousel/Carousel";
 // import { Link, useParams } from "react-router-dom";
 
 function XboxProductDetailsPage(params) {
