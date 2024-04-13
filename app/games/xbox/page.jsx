@@ -1,11 +1,9 @@
 "use client";
 import "./xboxproductpage.scss";
 import XboxHero from "../../assets/images/xbox.png";
-// import XboxHero from "../../assets/images/xbox2.jpeg";
 import HeartGreen from "../../assets/icons/heart-green.svg";
 import LeftGreen from "../../assets/icons/left-key-green.svg";
 import RightGreen from "../../assets/icons/right-key-green.svg";
-// import { Link } from "react-router-dom";
 import GameCard from "../../components/gamecard/gamecard";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -21,11 +19,8 @@ function XboxProductPage() {
   useEffect(() => {
     async function getAllXboxGames() {
       const response = await axios.get(
-        // `${import.meta.env.VITE_BASE_URL}/games/ps`
-        `http://localhost:8080/games/xbox`
+        `${process.env.NEXT_PUBLIC_BASE_URL}/games/xbox`
       );
-
-      console.log(response.data);
 
       setAllGames(response.data);
     }
@@ -85,12 +80,9 @@ function XboxProductPage() {
           </section>
 
           <section className="xbox-titles-container">
-            {/* map func here to serve image & data to GameCard */}
             {allGames?.map((game) => (
               <GameCard key={game.id} game={game} />
             ))}
-            {/* <GameCard />
-            <GameCard /> */}
           </section>
         </main>
       </>

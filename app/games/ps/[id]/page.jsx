@@ -3,28 +3,23 @@ import "./playstationproductdetailspage.scss";
 import Cart from "../../../assets/icons/cart.svg";
 import axios from "axios";
 import { useEffect, useState } from "react";
-// import { Link, useParams } from "react-router-dom";
-import ControlledCarousel from "../../../components/carousel/Carousel";
 import Image from "next/image";
 import Link from "next/link";
 import GameCarousel from "../../../components/carousel/Carousel";
 
 function PlaystationProductDetailsPage({ params }) {
   // state to set all games
+
   const [singleGame, setSingleGames] = useState({});
   const [price, setPrice] = useState("");
 
-  // get id from params to do api call
-  // const { id } = useParams();
-
   // useEffect to do axios call to get single game by id
+
   useEffect(() => {
     async function getSingleGame() {
       const response = await axios.get(
-        `http://localhost:8080/games/ps/${params.id}`
+        `${process.env.NEXT_PUBLIC_BASE_URL}/games/ps/${params.id}`
       );
-
-      console.log(response.data);
 
       setSingleGames(response.data);
     }
@@ -33,24 +28,18 @@ function PlaystationProductDetailsPage({ params }) {
   }, [setSingleGames, params.id]);
 
   // event handler to get price selected by user
+
   const handlePrice = (event) => {
     event.preventDefault();
-    console.log(event);
-    console.log(event.target);
-    console.log(event.target.checked);
-    console.log(event.target.id);
 
     if (event.target.checked && event.target.id === "price") {
       setPrice(singleGame.price);
-      console.log(singleGame.price);
     }
     if (event.target.checked && event.target.id === "price15days") {
       setPrice(singleGame.price_15days);
-      console.log(singleGame.price_15days);
     }
     if (event.target.checked && event.target.id === "price30days") {
       setPrice(singleGame.price_30days);
-      console.log(singleGame.price_30days);
     }
   };
 
@@ -70,10 +59,12 @@ function PlaystationProductDetailsPage({ params }) {
             <section className="ps-game-about">
               <div className="ps-game-about-container">
                 <h3 className="ps-game-about__subtitle">Compatibility</h3>
+
                 <h2 className="ps-game-about__title">{singleGame.platform}</h2>
               </div>
               <div className="ps-game-about-container">
                 <h3 className="ps-game-about__subtitle">About the game</h3>
+
                 <h2 className="ps-game-about__title">{singleGame.genre}</h2>
               </div>
             </section>
@@ -81,13 +72,8 @@ function PlaystationProductDetailsPage({ params }) {
             <section className="ps-game-price" onChange={handlePrice}>
               <div className="ps-game-price-container">
                 <h3 className="ps-game-price__subtitle">Rent</h3>
-                {/* <h2 className="ps-game-price__title">{singleGame.platform}</h2> */}
 
-                <label
-                  className="ps-game-price__title"
-                  htmlFor="price15days"
-                  // onChange={handlePrice}
-                >
+                <label className="ps-game-price__title" htmlFor="price15days">
                   <input
                     className="ps-game-price__radio"
                     type="radio"
@@ -99,7 +85,6 @@ function PlaystationProductDetailsPage({ params }) {
 
                 <label className="ps-game-price__title" htmlFor="price30days">
                   <input
-                    // onChange={handlePrice}
                     className="ps-game-price__radio"
                     type="radio"
                     name="price30days"
@@ -114,7 +99,6 @@ function PlaystationProductDetailsPage({ params }) {
 
                 <label className="ps-game-price__title" htmlFor="price">
                   <input
-                    // onChange={handlePrice}
                     className="ps-game-price__radio"
                     type="radio"
                     name="price"
@@ -127,10 +111,7 @@ function PlaystationProductDetailsPage({ params }) {
               <Link
                 href={{
                   pathname: "/checkout",
-                  // query: { price: price, singleGame: singleGame },
-                  // query: { search: `${price}` },
                   query: {
-                    // search: "search",
                     price: price,
                     title: singleGame.title,
                     image: singleGame.image1,
@@ -138,17 +119,10 @@ function PlaystationProductDetailsPage({ params }) {
                 }}
               >
                 <div className="ps-game-price__button">
-                  {/* <img
-                  className="ps-game-price__button-icon"
-                  src={Cart}
-                  alt="Cart icon"
-                /> */}
                   <Image
                     className="ps-game-price__button-icon"
                     src={Cart}
                     alt="Cart icon"
-                    width={10}
-                    height={10}
                   />
                   <h3 className="ps-game-price__button-subtitle">
                     Add to cart
@@ -158,11 +132,6 @@ function PlaystationProductDetailsPage({ params }) {
             </section>
 
             <section className="ps-game-hero">
-              {/* <img
-              className="ps-game-hero__image"
-              src={singleGame.image1}
-              alt="Hero image for game"
-            /> */}
               <Image
                 className="ps-game-hero__image"
                 src={singleGame.image1}

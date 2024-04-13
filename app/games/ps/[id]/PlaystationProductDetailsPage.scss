@@ -88,11 +88,9 @@
     @include desktop {
       width: 49vw;
       height: 40rem;
-      // margin-right: $spacing-small;
     }
 
     &-container {
-      //   height: 15rem;
       margin-left: 2.8rem;
       margin-bottom: 2.8rem;
 
@@ -111,7 +109,6 @@
 
     &__title {
       color: $color-primary-white;
-      //   width: 10rem;
 
       @include desktop {
         margin-bottom: $padding-small;
@@ -122,10 +119,9 @@
       height: 20px;
       width: 20px;
       margin-right: $spacing-small;
-      // accent-color: $color-primary-blue; // for xbox
 
       &:checked {
-        accent-color: $color-primary-blue; // for ps
+        accent-color: $color-primary-blue;
       }
     }
 
@@ -189,7 +185,6 @@
       @include desktop {
         @include flexbox(row, flex-start, flex-start);
         flex-wrap: wrap;
-        // width: 50vw;
       }
     }
 
@@ -251,7 +246,6 @@
 
     @include desktop {
       width: 100vw;
-      // height: 60rem;
 
       @include flexbox(row, space-evenly, flex-start);
       flex-wrap: wrap;
@@ -272,19 +266,3 @@
     // }
   }
 }
-
-// a {
-//   text-decoration: none;
-// }
-
-// .ps-game-price__radio {
-//   height: 20px;
-//   width: 20px;
-//   margin-right: $spacing-small;
-//   // accent-color: $color-primary-green; // for xbox
-//   // accent-color: $color-primary-blue; // for xbox
-//   &:checked {
-//     accent-color: $color-primary-green; // for xbox
-//     accent-color: $color-primary-blue; // for ps
-//   }
-// }

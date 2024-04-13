@@ -3,22 +3,12 @@
 @use "../../styles//partials/mixins" as *;
 @use "../../styles//partials/variables" as *;
 
-// .hero-image {
-//   background: rgb(200, 255, 128);
-//   background: linear-gradient(
-//     0deg,
-//     rgba(200, 255, 128, 1) 5%,
-//     rgba(13, 17, 23, 1) 97%
-//   );
-// }
-
 .xbox {
   width: 100vw;
   background-color: $color-secondary-black;
   overflow-x: hidden;
 
   @include desktop {
-    // padding: 6.4rem;
     overflow-x: hidden;
   }
 
@@ -34,7 +24,6 @@
     @include desktop {
       height: 82vh;
       margin-inline: 6.4rem;
-      // padding-inline: 3.2rem;
     }
 
     &__logo {
@@ -44,7 +33,6 @@
 
       @include desktop {
         padding-top: 3rem;
-        // margin-left: 7rem;
       }
     }
 
@@ -59,13 +47,6 @@
     }
 
     &__image {
-      // width: 602px;
-      // height: 617px;
-      // width: 476px;
-      // height: 488px;
-      // rotate: z 21.73deg;
-      // transform: rotateZ(21.73deg);
-      // transform: rotateX(21.73deg);
       height: 32rem;
       rotate: -21.79deg;
       position: relative;
@@ -73,10 +54,6 @@
       top: 100px;
 
       @include desktop {
-        // width: 887px;
-        // height: 910px;
-        // margin-left: 30vw;
-        // margin-bottom: 50rem;
         height: 38rem;
         width: auto;
         position: relative;
@@ -114,9 +91,6 @@
       @include flexbox(row, space-evenly, center);
     }
 
-    // &__image {
-    // }
-
     &__text {
       color: $color-primary-green;
       margin-bottom: 0;
@@ -125,7 +99,6 @@
 
   &-titles-container {
     @include desktop {
-      // width: 99vw;
       @include flexbox(row, flex-start, flex-start);
       flex-wrap: wrap;
     }

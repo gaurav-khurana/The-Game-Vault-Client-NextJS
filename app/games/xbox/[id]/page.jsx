@@ -6,25 +6,20 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import GameCarousel from "@/app/components/carousel/Carousel";
-// import { Link, useParams } from "react-router-dom";
 
 function XboxProductDetailsPage(params) {
-  console.log(params.params.id);
   // state to set all games
+
   const [singleGame, setSingleGames] = useState({});
   const [price, setPrice] = useState("");
 
-  // get id from params to do api call
-  // const { id } = useParams();
-
   // useEffect to do axios call to get single game by id
+
   useEffect(() => {
     async function getSingleGame() {
       const response = await axios.get(
-        `http://localhost:8080/games/xbox/${params.params.id}`
+        `${process.env.NEXT_PUBLIC_BASE_URL}/games/xbox/${params.params.id}`
       );
-
-      console.log(response.data);
 
       setSingleGames(response.data);
     }
@@ -35,22 +30,15 @@ function XboxProductDetailsPage(params) {
   // event handler to get price selected by user
   const handlePrice = (event) => {
     event.preventDefault();
-    console.log(event);
-    console.log(event.target);
-    console.log(event.target.checked);
-    console.log(event.target.id);
 
     if (event.target.checked && event.target.id === "price") {
       setPrice(singleGame.price);
-      console.log(singleGame.price);
     }
     if (event.target.checked && event.target.id === "price15days") {
       setPrice(singleGame.price_15days);
-      console.log(singleGame.price_15days);
     }
     if (event.target.checked && event.target.id === "price30days") {
       setPrice(singleGame.price_30days);
-      console.log(singleGame.price_30days);
     }
   };
 
@@ -86,25 +74,19 @@ function XboxProductDetailsPage(params) {
             <section className="xbox-game-price" onChange={handlePrice}>
               <div className="xbox-game-price-container">
                 <h3 className="xbox-game-price__subtitle">Rent</h3>
-                {/* <h2 className="xbox-game-price__title">{singleGame.platform}</h2> */}
 
-                <label
-                  className="xbox-game-price__title"
-                  htmlFor="price15days"
-                  // onChange={handlePrice}
-                >
+                <label className="xbox-game-price__title" htmlFor="price15days">
                   <input
                     className="xbox-game-price__radio"
                     type="radio"
                     name="price15days"
                     id="price15days"
-                  />{" "}
+                  />
                   {singleGame.price_15days} every two weeks
                 </label>
 
                 <label className="xbox-game-price__title" htmlFor="price30days">
                   <input
-                    // onChange={handlePrice}
                     className="xbox-game-price__radio"
                     type="radio"
                     name="price30days"
@@ -119,12 +101,11 @@ function XboxProductDetailsPage(params) {
 
                 <label className="xbox-game-price__title" htmlFor="price">
                   <input
-                    // onChange={handlePrice}
                     className="xbox-game-price__radio"
                     type="radio"
                     name="price"
                     id="price"
-                  />{" "}
+                  />
                   {singleGame.price}
                 </label>
               </div>
@@ -132,16 +113,13 @@ function XboxProductDetailsPage(params) {
               <Link
                 href={{
                   pathname: "/checkout",
-                  // query: { price: price, singleGame: singleGame },
-                  // query: { search: `${price}` },
+
                   query: {
-                    // search: "search",
                     price: price,
                     title: singleGame.title,
                     image: singleGame.image1,
                   },
                 }}
-                // state={{ price: price, singleGame: singleGame }}
               >
                 <div className="xbox-game-price__button">
                   <Image

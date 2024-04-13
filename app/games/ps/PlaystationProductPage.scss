@@ -3,22 +3,12 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-// .hero-image {
-//   background: rgb(23, 102, 255);
-//   background: linear-gradient(
-//     0deg,
-//     rgba(23, 102, 255, 1) 5%,
-//     rgba(13, 17, 23, 1) 97%
-//   );
-// }
-
 .ps {
   width: 100vw;
   background-color: $color-secondary-black;
   overflow-x: hidden;
 
   @include desktop {
-    // padding: 6.4rem;
     overflow-x: hidden;
   }
 
@@ -33,7 +23,6 @@
     @include desktop {
       height: 82vh;
       margin-inline: 6.4rem;
-      // padding-inline: 3.2rem;
     }
 
     &__logo {
@@ -44,7 +33,6 @@
 
       @include desktop {
         padding-top: 3rem;
-        // margin-left: 7rem;
       }
     }
 
@@ -64,10 +52,6 @@
       rotate: -23.79deg;
 
       @include desktop {
-        // width: 887px;
-        // height: 910px;
-        // margin-left: 30vw;
-        // margin-bottom: 50rem;
         position: relative;
         top: -250px;
         left: 40vw;
@@ -103,9 +87,6 @@
       @include flexbox(row, space-evenly, center);
     }
 
-    // &__image {
-    // }
-
     &__text {
       color: $color-primary-blue;
       margin-bottom: 0;
@@ -114,7 +95,6 @@
 
   &-titles-container {
     @include desktop {
-      // width: 99vw;
       @include flexbox(row, flex-start, flex-start);
       flex-wrap: wrap;
     }

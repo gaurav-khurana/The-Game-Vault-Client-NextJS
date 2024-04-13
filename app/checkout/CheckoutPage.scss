@@ -3,14 +3,6 @@
 @use "../styles//partials/mixins" as *;
 @use "../styles//partials/variables" as *;
 
-// * {
-//   font-size: 1rem;
-// }
-// img {
-//   width: 150px;
-//   height: 150px;
-// }
-
 .checkout {
   height: 100vh;
   background-color: $color-secondary-black;
@@ -19,7 +11,6 @@
 
   &-container {
     @include desktop {
-      // height: 120vh;
       @include flexbox(row, space-between, center);
       padding: 5rem;
     }
@@ -38,7 +29,6 @@
 
   &__title {
     color: $color-primary-white;
-    // font-size: 2rem;
     margin-bottom: $padding-big;
 
     @include desktop {
@@ -54,8 +44,7 @@
     margin-right: $spacing-small;
     margin-bottom: $spacing-small;
     padding-top: 2rem;
-    // margin: $spacing-small;
-    // margin-left: 0;
+
     @include flexbox(column, center, center);
 
     @include desktop {
@@ -81,10 +70,6 @@
   }
 
   &-accordian {
-    // &-container {
-    //   @include flexbox(column, flex-start, flex-start);
-    // }
-
     width: 100vw;
     height: 50vh;
 
@@ -115,10 +100,8 @@
       padding: $padding-small;
       margin-bottom: $spacing-small;
 
-      // border-color: $color-secondary-black;
       &::placeholder {
         color: $color-secondary-black;
-        // padding: $padding-small;
       }
 
       &:focus {
@@ -146,10 +129,6 @@
 
 .MuiAccordionDetails-root {
   @include flexbox(column, flex-start, flex-start);
-}
-
-.MuiAccordionSummary-content {
-  // font-size: 1rem;
 }
 
 .MuiButton-root {

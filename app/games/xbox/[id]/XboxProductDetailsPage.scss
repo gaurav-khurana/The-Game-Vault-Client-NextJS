@@ -82,11 +82,9 @@
     @include desktop {
       width: 49vw;
       height: 40rem;
-      // margin-right: $spacing-small;
     }
 
     &-container {
-      //   height: 15rem;
       margin-left: 2.8rem;
       margin-bottom: 2.8rem;
 
@@ -105,7 +103,6 @@
 
     &__title {
       color: $color-primary-white;
-      //   width: 10rem;
 
       @include desktop {
         margin-bottom: $padding-small;
@@ -116,10 +113,9 @@
       height: 20px;
       width: 20px;
       margin-right: $spacing-small;
-      // accent-color: $color-primary-green; // for xbox
 
       &:checked {
-        accent-color: $color-primary-green; // for xbox
+        accent-color: $color-primary-green;
       }
 
       @include desktop {
@@ -187,7 +183,6 @@
       @include desktop {
         @include flexbox(row, flex-start, flex-start);
         flex-wrap: wrap;
-        // width: 50vw;
       }
     }
 
@@ -243,7 +238,6 @@
 
     @include desktop {
       width: 100vw;
-      // height: 60rem;
 
       @include flexbox(row, space-evenly, flex-start);
       flex-wrap: wrap;
@@ -255,8 +249,6 @@
         object-fit: cover;
 
         margin-bottom: $padding-small;
-        // transform: scale(0.8);
-        // zoom: 75%;
       }
     }
   }
@@ -265,7 +257,3 @@
     @include flexbox(row, center, center);
   }
 }
-
-// a {
-//   text-decoration: none;
-// }
