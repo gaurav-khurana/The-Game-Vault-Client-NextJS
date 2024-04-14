@@ -13,30 +13,6 @@
   align-items: $align-items;
 }
 
-// media queries for mobile wide screens
-
-@mixin mobile-wide {
-  @media (min-width: $breakpoint-mobile) and (max-width: 767px) {
-    @content;
-  }
-}
-
-// media queries for tablet
-
-@mixin tablet {
-  @media (min-width: $breakpoint-tablet) {
-    @content;
-  }
-}
-
-// media queries for tablet - landscape mode
-
-@mixin tablet-landscape {
-  @media (min-width: $breakpoint-tablet-landscape) and (max-width: $breakpoint-desktop) {
-    @content;
-  }
-}
-
 // media queries for desktop
 
 @mixin desktop {

@@ -30,7 +30,6 @@ function Accordian() {
             id="name"
             placeholder="john doe"
             defaultValue="John Doe"
-            // onInput={handleName}
           />
 
           <label className="checkout-accordian__label" htmlFor="email">
@@ -43,7 +42,6 @@ function Accordian() {
             id="email"
             placeholder="abc@example.com"
             defaultValue="johndoe@thegamevault.com"
-            // onInput={handleEmail}
           />
         </AccordionDetails>
       </Accordion>
@@ -59,7 +57,6 @@ function Accordian() {
 
         <AccordionDetails className="checkout-accordian-container">
           <label className="checkout-accordian__label" htmlFor="address">
-            {" "}
             Address
           </label>
           <input
@@ -67,7 +64,6 @@ function Accordian() {
             type="text"
             name="address"
             id="address"
-            // onChange={handleAddress}
             defaultValue="123, Privet Drive"
           />
 
@@ -80,7 +76,6 @@ function Accordian() {
             name="city"
             id="city"
             defaultValue="Vancouver"
-            // onChange={handleCity}
           />
 
           <label className="checkout-accordian__label" htmlFor="code">
@@ -92,7 +87,6 @@ function Accordian() {
             name="code"
             id="code"
             defaultValue="V6J 4Y9"
-            // onChange={handlePostalCode}
           />
 
           <label className="checkout-accordian__label" htmlFor="country">
@@ -104,7 +98,6 @@ function Accordian() {
             name="country"
             id="country"
             defaultValue="Canada"
-            // onChange={handleCountry}
           />
 
           <div className="checkout-accordian__checkbox-container">
@@ -113,6 +106,7 @@ function Accordian() {
               type="checkbox"
               name="billing"
               id="billing"
+              checked
             />
             <label className="checkout-accordian__checkbox-label" htmlFor="">
               Same for Billing Address
@@ -131,35 +125,7 @@ function Accordian() {
         </AccordionSummary>
 
         <AccordionDetails className="checkout-accordian-container">
-          <div className="checkout-accordian__checkbox-container">
-            <input
-              className="checkout-accordian__checkbox"
-              type="checkbox"
-              name="creditcard"
-              id="creditcard"
-            />
-            <label
-              className="checkout-accordian__checkbox-label"
-              htmlFor="creditcard"
-            >
-              Credit card
-            </label>
-          </div>
-
-          {/* <div className="checkout-accordian__checkbox-container">
-                <input
-                  className="checkout-accordian__label"
-                  type="checkbox"
-                  name=""
-                  id=""
-                />
-                <label className="checkout-accordian__checkbox" htmlFor="">
-                  Debit card
-                </label>
-              </div> */}
-
           <label className="checkout-accordian__label" htmlFor="cardnumber">
-            {" "}
             Card Number
           </label>
           <input
@@ -169,10 +135,9 @@ function Accordian() {
             id="cardnumber"
             placeholder="xxxx"
             defaultValue="1234-xxxx-xxx-6789"
-            // onChange={handleCardNumber}
           />
+
           <label className="checkout-accordian__label" htmlFor="expdate">
-            {" "}
             Expiration Date (MM/YY)
           </label>
           <input
@@ -182,7 +147,6 @@ function Accordian() {
             id="expdate"
             placeholder="MM/YY"
             defaultValue="12/24"
-            // onChange={handleExpDate}
           />
 
           <label className="checkout-accordian__label" htmlFor="cvv">
@@ -195,11 +159,9 @@ function Accordian() {
             id="cvv"
             placeholder="xxx"
             defaultValue="123"
-            // onChange={handleCVV}
           />
 
           <label className="checkout-accordian__label" htmlFor="nameoncard">
-            {" "}
             Name on Card
           </label>
           <input
@@ -209,20 +171,14 @@ function Accordian() {
             id="nameoncard"
             placeholder="firstname lastname"
             defaultValue="John Doe"
-            // onChange={handleCardName}
           />
         </AccordionDetails>
 
         <AccordionActions>
           <Button className="btn btn__cancel">Cancel</Button>
+
           <Link href="/orderconfirmation">
-            <Button
-              // variant="container"
-              // color="success"
-              className="btn btn__pay"
-            >
-              Pay Now
-            </Button>
+            <Button className="btn btn__pay">Pay Now</Button>
           </Link>
         </AccordionActions>
       </Accordion>

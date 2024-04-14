@@ -45,6 +45,15 @@
       color: $color-secondary-black;
       text-align: center;
       cursor: pointer;
+
+      &:hover {
+        color: #0000;
+        background: linear-gradient(90deg, #1766ff 100%, #000 0) var(--_p, 100%) /
+          200% no-repeat;
+
+        background-clip: text;
+        transition: 0.4s;
+      }
     }
   }
 }

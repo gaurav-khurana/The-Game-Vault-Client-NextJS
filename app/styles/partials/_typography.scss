@@ -36,7 +36,8 @@
 .xbox-hero__logo,
 .ps-game-header__logo,
 .xbox-game-header__logo,
-.checkout__logo {
+.checkout__logo,
+.confirmation-header__logo {
   font-size: $mob-font-logo;
   // line-height: 2.3rem;/
   font-weight: 600;
@@ -95,12 +96,19 @@
 
 .ps-game-description__text,
 .xbox-game-description__text,
-// .checkout-accordian__label,
-// .checkout-accordian__input,
 .confirmation__text,
 .MuiButton-text,
 .confirmation__btn {
   font-size: $mob-font-body;
   line-height: 2.4rem;
+  font-weight: 400;
+}
+
+.ps-game-about__subtitle,
+.xbox-game-about__subtitle,
+.ps-game-price__subtitle,
+.xbox-game-price__subtitle,
+.ps-icon__text--regular,
+.xbox-icon__text--regular {
   font-weight: 400;
 }

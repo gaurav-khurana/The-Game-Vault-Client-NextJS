@@ -9,10 +9,9 @@
   margin-bottom: $spacing-small;
 
   @include desktop {
-    // @include flexbox (row, flex)
     width: 50vw;
     width: 49.3vw;
-    // margin-right: $spacing-small;
+
     &:nth-child(odd) {
       margin-right: $spacing-small;
     }
@@ -42,15 +41,15 @@
     text-align: center;
     position: relative;
     bottom: 40px;
-    // backup opt if gradient doesnt work
+
     background-color: rgba(33, 41, 50, 0.5);
+    background-color: $color-secondary-dark-grey;
+    padding: $spacing-small 0;
     cursor: pointer;
 
     @include desktop {
-      // @include flexbox (row, flex)
       width: 50vw;
       width: 49.3vw;
-      // margin-right: $spacing-small;
     }
   }
 }

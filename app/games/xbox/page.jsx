@@ -64,7 +64,9 @@ function XboxProductPage() {
                   alt="Icon in Green for Rental option"
                 />
 
-                <h3 className="xbox-icon__text">Rent</h3>
+                <h3 className="xbox-icon__text xbox-icon__text--regular">
+                  Rent
+                </h3>
               </div>
 
               <div className="xbox-icon-container">
@@ -74,7 +76,9 @@ function XboxProductPage() {
                   alt="Icon in blue for Buying option"
                 />
 
-                <h3 className="xbox-icon__text">Buy</h3>
+                <h3 className="xbox-icon__text xbox-icon__text--regular">
+                  Buy
+                </h3>
               </div>
             </div>
           </section>

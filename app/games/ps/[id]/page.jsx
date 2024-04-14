@@ -2,10 +2,9 @@
 import "./playstationproductdetailspage.scss";
 import Cart from "../../../assets/icons/cart.svg";
 import axios from "axios";
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import GameCarousel from "../../../components/carousel/Carousel";
 
 function PlaystationProductDetailsPage({ params }) {
   // state to set all games
@@ -132,23 +131,16 @@ function PlaystationProductDetailsPage({ params }) {
             </section>
 
             <section className="ps-game-hero">
-              <Image
+              <img
                 className="ps-game-hero__image"
                 src={singleGame.image1}
                 alt="Hero image for game"
-                width={390}
-                height={400}
-                quality={100}
               />
             </section>
 
             <section className="ps-game-capabilities">
               <h3 className="ps-game-capabilities__title">Capabilities</h3>
               <div className="ps-game-capabilities-container">
-                <h2 className="ps-game-capabilities__text">
-                  {singleGame.online_play}
-                </h2>
-
                 <div className="ps-game-capabilities__text-container">
                   <h2 className="ps-game-capabilities__text ps-game-capabilities__text--small">
                     {singleGame.players}
@@ -166,6 +158,10 @@ function PlaystationProductDetailsPage({ params }) {
                 <h2 className="ps-game-capabilities__text">
                   Release date : {singleGame.release_date}
                 </h2>
+
+                <h2 className="ps-game-capabilities__text">
+                  {singleGame.online_play}
+                </h2>
               </div>
             </section>
 
@@ -177,51 +173,36 @@ function PlaystationProductDetailsPage({ params }) {
             </section>
 
             <section className="ps-game-gallery">
-              {/* <img */}
-              <Image
+              <img
                 className="ps-game-gallery__image"
                 src={singleGame.image2}
                 alt={`image for ${singleGame.title}`}
-                width={390}
-                height={400}
               />
-              {/* <img */}
-              <Image
+
+              <img
                 className="ps-game-gallery__image"
                 src={singleGame.image3}
                 alt={`image for ${singleGame.title}`}
-                width={390}
-                height={400}
               />
-              {/* <img */}
-              <Image
+
+              <img
                 className="ps-game-gallery__image"
                 src={singleGame.image4}
                 alt={`image for ${singleGame.title}`}
-                width={390}
-                height={400}
               />
-              {/* <img */}
-              <Image
+
+              <img
                 className="ps-game-gallery__image"
                 src={singleGame.image5}
                 alt={`image for ${singleGame.title}`}
-                width={390}
-                height={400}
               />
-              {/* <img */}
-              <Image
+
+              <img
                 className="ps-game-gallery__image"
                 src={singleGame.image1}
                 alt={`image for ${singleGame.title}`}
-                width={390}
-                height={400}
               />
             </section>
-
-            {/* <section className="ps-game-carousel">
-              <GameCarousel singleGame={singleGame} />
-            </section> */}
           </section>
         </main>
       </>

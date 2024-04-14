@@ -10,26 +10,50 @@
 
   @include flexbox(column, flex-start, flex-start);
 
+  &-header {
+    &__logo {
+      color: $color-primary-white;
+      padding-top: 3.3rem;
+      margin-left: 2.8rem;
+
+      @include desktop {
+        padding-top: 3rem;
+      }
+    }
+  }
+
   &-container {
     width: 65vw;
     height: 50vh;
     margin-inline: auto;
-    @include flexbox(column, space-evenly, center);
+    @include flexbox(column, center, center);
   }
 
   &__title {
     color: $color-primary-white;
+    line-height: 1.5;
+
+    @include desktop {
+      font-size: $mob-font-heading;
+    }
   }
 
   &__text {
     color: $color-primary-white;
+    line-height: 1.5;
+    margin-top: $padding-small;
   }
 
   &__btn {
-    width: 60vw;
+    width: 65vw;
     height: 5rem;
     background-color: $color-secondary-dark-grey;
     color: $color-primary-green;
     border: $divider-width solid $color-primary-green;
+    margin-top: 4rem;
+
+    @include desktop {
+      width: 25vw;
+    }
   }
 }

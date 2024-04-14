@@ -90,6 +90,10 @@
     &__text {
       color: $color-primary-blue;
       margin-bottom: 0;
+
+      &--regular {
+        font-weight: 400;
+      }
     }
   }
 

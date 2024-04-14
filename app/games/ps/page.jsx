@@ -64,7 +64,7 @@ function PlaystationProductPage() {
                   alt="Icon in blue for Rental option"
                 />
 
-                <h3 className="ps-icon__text">Rent</h3>
+                <h3 className="ps-icon__text ps-icon__text--regular">Rent</h3>
               </div>
 
               <div className="ps-icon-container">
@@ -74,7 +74,7 @@ function PlaystationProductPage() {
                   alt="Icon in blue for Buying option"
                 />
 
-                <h3 className="ps-icon__text">Buy</h3>
+                <h3 className="ps-icon__text ps-icon__text--regular">Buy</h3>
               </div>
             </div>
           </section>

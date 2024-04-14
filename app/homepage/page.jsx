@@ -1,5 +1,5 @@
 import Link from "next/link";
-import "./HomePage.scss";
+import "./homepage.scss";
 
 function HomePage() {
   return (

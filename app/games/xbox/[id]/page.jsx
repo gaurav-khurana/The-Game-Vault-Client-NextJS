@@ -5,7 +5,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import GameCarousel from "@/app/components/carousel/Carousel";
 
 function XboxProductDetailsPage(params) {
   // state to set all games
@@ -135,13 +134,10 @@ function XboxProductDetailsPage(params) {
             </section>
 
             <section className="xbox-game-hero">
-              <Image
+              <img
                 className="xbox-game-hero__image"
                 src={singleGame.image1}
                 alt="Hero image for game"
-                width={390}
-                height={400}
-                sizes="100vw"
               />
             </section>
 
@@ -149,10 +145,6 @@ function XboxProductDetailsPage(params) {
               <h3 className="xbox-game-capabilities__title">Capabilities</h3>
 
               <section className="xbox-game-capabilities-container">
-                <h2 className="xbox-game-capabilities__text">
-                  {singleGame.online_play}
-                </h2>
-
                 <div className="xbox-game-capabilities__text-container">
                   <h2 className="xbox-game-capabilities__text xbox-game-capabilities__text--small">
                     {singleGame.players}
@@ -170,6 +162,10 @@ function XboxProductDetailsPage(params) {
                 <h2 className="xbox-game-capabilities__text">
                   Release date : {singleGame.release_date}
                 </h2>
+
+                <h2 className="xbox-game-capabilities__text">
+                  {singleGame.online_play}
+                </h2>
               </section>
             </section>
 
@@ -181,46 +177,36 @@ function XboxProductDetailsPage(params) {
             </section>
 
             <section className="xbox-game-gallery">
-              <Image
+              <img
                 className="xbox-game-gallery__image"
                 src={singleGame.image2}
                 alt={`image for ${singleGame.title}`}
-                width={390}
-                height={400}
               />
-              <Image
+
+              <img
                 className="xbox-game-gallery__image"
                 src={singleGame.image3}
                 alt={`image for ${singleGame.title}`}
-                width={390}
-                height={400}
               />
-              <Image
+
+              <img
                 className="xbox-game-gallery__image"
                 src={singleGame.image4}
                 alt={`image for ${singleGame.title}`}
-                width={390}
-                height={400}
               />
-              <Image
+
+              <img
                 className="xbox-game-gallery__image"
                 src={singleGame.image5}
                 alt={`image for ${singleGame.title}`}
-                width={390}
-                height={400}
               />
-              <Image
+
+              <img
                 className="xbox-game-gallery__image"
                 src={singleGame.image1}
                 alt={`image for ${singleGame.title}`}
-                width={390}
-                height={400}
               />
             </section>
-
-            {/* <section className="xbox-game-carousel">
-              <GameCarousel singleGame={singleGame} />
-            </section> */}
           </section>
         </main>
       </>
