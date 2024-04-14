@@ -4,7 +4,7 @@ import XboxHero from "../../assets/images/xbox.png";
 import HeartGreen from "../../assets/icons/heart-green.svg";
 import LeftGreen from "../../assets/icons/left-key-green.svg";
 import RightGreen from "../../assets/icons/right-key-green.svg";
-import GameCard from "../../components/gamecard/gamecard";
+import GameCard from "../../components/GameCard/GameCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";

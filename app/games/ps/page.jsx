@@ -4,7 +4,7 @@ import PsHero from "../../assets/images/ps.png";
 import HeartBlue from "../../assets/icons/heart-blue.svg";
 import LeftBlue from "../../assets/icons/left-key-blue.svg";
 import RightBlue from "../../assets/icons/right-key-blue.svg";
-import GameCard from "../../components/gamecard/gamecard";
+import GameCard from "../../components/GameCard/GameCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
