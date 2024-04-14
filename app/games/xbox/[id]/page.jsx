@@ -1,5 +1,5 @@
 "use client";
-import "./xboxproductdetailspage.scss";
+import "./XboxProductDetailsPage.scss";
 import Cart from "../../../assets/icons/cart.svg";
 import axios from "axios";
 import { useEffect, useState } from "react";

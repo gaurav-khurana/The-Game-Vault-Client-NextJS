@@ -1,5 +1,5 @@
 "use client";
-import "./playstationproductpage.scss";
+import "./PlaystationProductPage.scss";
 import PsHero from "../../assets/images/ps.png";
 import HeartBlue from "../../assets/icons/heart-blue.svg";
 import LeftBlue from "../../assets/icons/left-key-blue.svg";
