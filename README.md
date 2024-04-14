@@ -83,7 +83,16 @@ No external API's will be used for "The Game Vault"
 
 ### Product Details Page
 
-![Product Details Page](./app/assets/images/TGV%20Product%20Details%20Page.png)
+![Product Details Page](./app/assets/images/TGV%20Product%20Details%20Page%201.png)
+![Product Details Page](./app/assets/images/TGV%20Product%20Details%20Page%202.png)
+
+### Checkout Page
+
+![Product Details Page](./app/assets/images/TGV%20Checkout%20Page.png)
+
+### Order Confirmation Page
+
+![Product Details Page](./app/assets/images/TGV%20Order%20Confirmation%20Page.png)
 
 ## Data
 
