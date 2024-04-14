@@ -1,5 +1,5 @@
 "use client";
-import "./xboxproductpage.scss";
+import "./XboxProductPage.scss";
 import XboxHero from "../../assets/images/xbox.png";
 import HeartGreen from "../../assets/icons/heart-green.svg";
 import LeftGreen from "../../assets/icons/left-key-green.svg";

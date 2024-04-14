@@ -1,5 +1,5 @@
 "use client";
-import "./checkoutpage.scss";
+import "./CheckoutPage.scss";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Accordian from "../components/Accordian/Accordian";
