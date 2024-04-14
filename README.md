@@ -21,7 +21,7 @@ Hence, "The Game Vault" platform which lets you decide if you want to rent the g
 ## Features
 
 - User will be able to navigate to the xbox & playstation games area, where they can click & select any game to see their details.
-- After going through the details & photo gallery of the game, they would have an option to rent out the game for 15 days or 30 days or they can even purchase the game.
+- After going through the details & photo gallery of the game, they would have an option to rent out the game for 2 or 4 weeks or they can even purchase the game.
 - User will be redirect to checkout page with product in cart, where they fill out a contact details form, shipping details, payment details.
 - Once order is succesfully placed, they will be redirected to order confirmation page
 
@@ -30,18 +30,20 @@ Hence, "The Game Vault" platform which lets you decide if you want to rent the g
 ## Tech Stack
 
 - React
-- MySQL / SQLite
+- Next.js
+- MySQL
 - Express
 - Heroku
+- Netlify
 - Client libraries:
-  - vite
+
   - react
   - react-router
-  - react-router-dom
   - axios
   - sass
-  - bootstrap-react / daisy ui (tailwind css)
-  - material-ui
+  - bootstrap-react
+  - material-ui-react
+
 - Server libraries:
   - node
   - knex
@@ -69,29 +71,23 @@ No external API's will be used for "The Game Vault"
 
 ### Home Page
 
-![Landing Page](./src/assets/images/TGV%20Landing%20Page.png)
+![Landing Page](./app/assets/images/TGV%20Landing%20Page.png)
 
 ### Menu/Navigation Page
 
-![Menu/Navigation Page](./src/assets/images/TGV%20Menu:Navigation%20Page.png)
+![Menu/Navigation Page](./app/assets/images/TGV%20Menu:Navigation%20Page.png)
 
 ### Product Page
 
-![Product Page](./src/assets/images/TGV%20Product%20Page.png)
+![Product Page](./app/assets/images/TGV%20Product%20Page.png)
 
 ### Product Details Page
 
-![Product Details Page](./src/assets/images/TGV%20Product%20Details%20Page.png)
+![Product Details Page](./app/assets/images/TGV%20Product%20Details%20Page.png)
 
 ## Data
 
-Data would be in form of 2 different tables i.e Xbox games table & Playstation games table.
-
-![Data and relationship drawing](./Data%20&%20relationship.png)
-
-> TO BE DECIDED
-> They may not have any relationship with one another, or may need a junction table.
-> May need Extra customer details table which will be seeded by customer details from checkout page
+Data would be in form of single table comprising of all games with details for Xbox & Playstation games.
 
 ## Endpoints
 
@@ -104,14 +100,26 @@ Sample Response:
 ```
 [
     {
-        "id": 1,
-        "title": "F1 23",
-        "releaseDate": "TBD",
-        "description": "F1 23 is an upcoming racing video game
-        "price": 59.99,
-        "platform": "Xbox One",
-        "genre": "Racing",
-        "developer": "Codemasters"
+       "id": 1,
+        "title": "Hogwarts Legacy",
+        "release_date": "February 10, 2023",
+        "description": "Hogwarts Legacy is an upcoming action role-playing video game set in the Harry Potter universe, developed by Portkey Games and published by Warner Bros. Interactive Entertainment. The game is set in the late 1800s and allows players to attend Hogwarts School of Witchcraft and Wizardry as a student, explore the wizarding world, learn spells, brew potions, and battle magical creatures.",
+        "price": "$59.99",
+        "price_15days": "$20.99",
+        "price_30days": "$35.99",
+        "platform": "Xbox One  Xbox Series X | S",
+        "genre": "Action Role-Playing Open world",
+        "developer": "Portkey Games",
+        "players": "Single player",
+        "online_play": "Single player offline",
+        "ratings": "4.5 / 5",
+        "image1": "http://localhost:8080/static-files/images/HogwartsLegacy/Hogwarts1.webp",
+        "image2": "http://localhost:8080/static-files/images/HogwartsLegacy/Hogwarts2.jpeg",
+        "image3": "http://localhost:8080/static-files/images/HogwartsLegacy/Hogwarts3.jpeg",
+        "image4": "http://localhost:8080/static-files/images/HogwartsLegacy/Hogwarts4.jpeg",
+        "image5": "http://localhost:8080/static-files/images/HogwartsLegacy/Hogwarts5.jpeg",
+        "created_at": "2024-04-08T03:10:21.000Z",
+        "updated_at": "2024-04-08T03:10:21.000Z"
     },
     ...
 ]
@@ -126,13 +134,25 @@ Sample Response:
 ```
     {
         "id": 1,
-        "title": "F1 23",
-        "releaseDate": "TBD",
-        "description": "F1 23 is an upcoming racing video game
-        "price": 59.99,
-        "platform": "Xbox One",
-        "genre": "Racing",
-        "developer": "Codemasters"
+        "title": "Hogwarts Legacy",
+        "release_date": "February 10, 2023",
+        "description": "Hogwarts Legacy is an upcoming action role-playing video game set in the Harry Potter universe, developed by Portkey Games and published by Warner Bros. Interactive Entertainment. The game is set in the late 1800s and allows players to attend Hogwarts School of Witchcraft and Wizardry as a student, explore the wizarding world, learn spells, brew potions, and battle magical creatures.",
+        "price": "$59.99",
+        "price_15days": "$20.99",
+        "price_30days": "$35.99",
+        "platform": "Xbox One  Xbox Series X | S",
+        "genre": "Action Role-Playing Open world",
+        "developer": "Portkey Games",
+        "players": "Single player",
+        "online_play": "Single player offline",
+        "ratings": "4.5 / 5",
+        "image1": "http://localhost:8080/static-files/images/HogwartsLegacy/Hogwarts1.webp",
+        "image2": "http://localhost:8080/static-files/images/HogwartsLegacy/Hogwarts2.jpeg",
+        "image3": "http://localhost:8080/static-files/images/HogwartsLegacy/Hogwarts3.jpeg",
+        "image4": "http://localhost:8080/static-files/images/HogwartsLegacy/Hogwarts4.jpeg",
+        "image5": "http://localhost:8080/static-files/images/HogwartsLegacy/Hogwarts5.jpeg",
+        "created_at": "2024-04-08T03:10:21.000Z",
+        "updated_at": "2024-04-08T03:10:21.000Z"
     }
 ```
 
@@ -145,14 +165,26 @@ Sample Response:
 ```
 [
     {
-        "id": 1,
-        "title": "F1 23",
-        "releaseDate": "TBD",
-        "description": "F1 23 is an upcoming racing video game
-        "price": 59.99,
-        "platform": "Xbox One",
-        "genre": "Racing",
-        "developer": "Codemasters"
+        "id": 12,
+        "title": "Spider-Man: Miles Morales",
+        "release_date": "November 12, 2020",
+        "description": "Spider-Man: Miles Morales is an action-adventure game developed by Insomniac Games. Players assume the role of Miles Morales as he becomes the new Spider-Man and must save his home, Harlem, from various threats while learning to master his newfound abilities. The game features thrilling web-swinging mechanics, fast-paced combat, and a heartfelt story.",
+        "price": "$49.99",
+        "price_15days": "$17.99",
+        "price_30days": "$29.99",
+        "platform": "PS4 PS5",
+        "genre": "Action Role-playing Open world",
+        "developer": "Insomniac Games",
+        "players": "Single player",
+        "online_play": "Single player offline",
+        "ratings": "4.6 / 5",
+        "image1": "http://localhost:8080/static-files/images/SpidermanMilesMorales/spiderman1.png",
+        "image2": "http://localhost:8080/static-files/images/SpidermanMilesMorales/spiderman2.jpeg",
+        "image3": "http://localhost:8080/static-files/images/SpidermanMilesMorales/spiderman3.jpeg",
+        "image4": "http://localhost:8080/static-files/images/SpidermanMilesMorales/spiderman4.jpeg",
+        "image5": "http://localhost:8080/static-files/images/SpidermanMilesMorales/spiderman5.jpeg",
+        "created_at": "2024-04-08T03:10:21.000Z",
+        "updated_at": "2024-04-08T03:10:21.000Z"
     },
     ...
 ]
@@ -166,41 +198,32 @@ Sample Response:
 
 ```
     {
-        "id": 1,
-        "title": "F1 23",
-        "releaseDate": "TBD",
-        "description": "F1 23 is an upcoming racing video game
-        "price": 59.99,
-        "platform": "Xbox One",
-        "genre": "Racing",
-        "developer": "Codemasters"
+        "id": 12,
+        "title": "Spider-Man: Miles Morales",
+        "release_date": "November 12, 2020",
+        "description": "Spider-Man: Miles Morales is an action-adventure game developed by Insomniac Games. Players assume the role of Miles Morales as he becomes the new Spider-Man and must save his home, Harlem, from various threats while learning to master his newfound abilities. The game features thrilling web-swinging mechanics, fast-paced combat, and a heartfelt story.",
+        "price": "$49.99",
+        "price_15days": "$17.99",
+        "price_30days": "$29.99",
+        "platform": "PS4 PS5",
+        "genre": "Action Role-playing Open world",
+        "developer": "Insomniac Games",
+        "players": "Single player",
+        "online_play": "Single player offline",
+        "ratings": "4.6 / 5",
+        "image1": "http://localhost:8080/static-files/images/SpidermanMilesMorales/spiderman1.png",
+        "image2": "http://localhost:8080/static-files/images/SpidermanMilesMorales/spiderman2.jpeg",
+        "image3": "http://localhost:8080/static-files/images/SpidermanMilesMorales/spiderman3.jpeg",
+        "image4": "http://localhost:8080/static-files/images/SpidermanMilesMorales/spiderman4.jpeg",
+        "image5": "http://localhost:8080/static-files/images/SpidermanMilesMorales/spiderman5.jpeg",
+        "created_at": "2024-04-08T03:10:21.000Z",
+        "updated_at": "2024-04-08T03:10:21.000Z"
     }
 ```
 
-**GET /allgames** // To be decided //
-
-- get all xbox & playstation games
-
-**POST /billing** // To be decided //
-
-- to post billing details
-
-**POST /shipping** // To be decided //
-
-- to post shipping details
-
-**POST /payment** // To be decided //
-
-- to post payment details
-
-**GET /customerdetails** // To be decided //
-
-- get customer billing, shipping & payment details
-
 ## Auth.
 
-Inclusion in application is to be decided. If included then, Login Page would be added to site flow.
-Auth may be a nice to have feature
+Auth is not included in the application.
 
 ## Roadmap
 
@@ -219,15 +242,15 @@ Auth may be a nice to have feature
 
 - Create migrations
 
-- Create 2 migrations for tables for xbox & playstation
+- Create migrations for table containing xbox & playstation games
 
-- Create seeds database with xbox & playstation data
+- Create seeds database with xbox & playstation game data
 
 - Check database functionality using Postman
 
 - Deploy client and server projects so all commits will be reflected in production
 
-- Create Server routes, controllers for all get requests (post requests if included in project)
+- Create Server routes, controllers for all get requests
 
 - Feature: Landing Page
 
@@ -239,32 +262,26 @@ Auth may be a nice to have feature
 
 - Feature: Xbox & Playstation product page
 
-  - Implement product page with animations
   - Create GET /xbox - to get all xbox games
   - Create GET /playstation - to get all playstation games
 
 - Feature: Xbox & Playstation product page
 
-  - Implement product details page with animations
   - Create GET /xbox/:id - to get xbox game by id
   - Create GET /playstation/:id - to get playstation game by id
 
 - Feature: Checkout Page
 
   - Implement Accodian with Billing details, Shipping details & payments details with form
-  - Form validation for all fields
-  - Get data from form (if included)
-  - Create POST /billing (Client side) to get billing info (if included)
-  - Create POST /shipping (Client side) to get shipping info (if included)
-  - Create POST /payment (Client side) to get payment info (if included)
 
 - Feature: Order confirmation
 
-  - Create GET /customerdetails to get customer's billing, shipping & payment info
-  - Implement Order confirmation page with order number (uniqid) & display customer details
-  - Navigate back to Homepage
+  - Implement Order confirmation page
+  - Navigate back to Homepage/Menu page
 
 - Bug fixes
+
+- Deploy using Heroku & Netlify
 
 - DEMO DAY
 
@@ -272,7 +289,6 @@ Auth may be a nice to have feature
 
 ```
 > Auth - User Login Page
-> Landing  page - 360 rotating animation
 > POST methods to post all customer details to endpoint & GET method to all customer details to render on Order Confirmation Page
 > Page to track order status
 ```

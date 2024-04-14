@@ -3,7 +3,6 @@ import "./checkoutpage.scss";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Accordian from "../components/Accordian/Accordian";
-// import { Suspense } from "react";
 
 function CheckoutPage() {
   // search url for data passed from ps or xbox game

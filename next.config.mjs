@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
-// const nextConfig = {};
 
-// export default nextConfig;
 const nextConfig = {
   images: {
     remotePatterns: [
@@ -13,18 +11,9 @@ const nextConfig = {
       },
     ],
   },
-  //   async rewrites() {
-  //     return [
-  //       {
-  //         source: "/games/*",
-  //         destination: "http://localhost:8080/games/*",
-  //       },
-  //     ];
-  //   },
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+  },
 };
 
 export default nextConfig;
-
-// module.exports = {
-
-// };
