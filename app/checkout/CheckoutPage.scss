@@ -49,6 +49,7 @@
 
     @include desktop {
       width: 30vw;
+      padding-top: 0;
     }
 
     &__image {
@@ -56,11 +57,11 @@
       height: 30rem;
       object-fit: cover;
       object-position: 60%;
-      border-radius: $image-radius;
+      // border-radius: $image-radius;
       margin-bottom: $padding-big;
 
       @include desktop {
-        width: 20vw;
+        width: 30vw;
       }
     }
 
@@ -86,14 +87,14 @@
     }
 
     &__label {
-      font-size: 1rem;
+      font-size: 1.3rem;
       color: $color-secondary-black;
     }
 
     &__input {
-      height: 2rem;
+      height: 4rem;
       width: 45vw;
-      font-size: 1rem;
+      font-size: 1.6rem;
       background-color: $color-primary-green;
       border: $divider-width solid $color-secondary-black;
       border-radius: $button-radius;
@@ -109,7 +110,7 @@
       }
 
       @include desktop {
-        width: 12vw;
+        width: 20vw;
       }
     }
 

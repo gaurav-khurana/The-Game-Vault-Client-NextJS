@@ -1,6 +1,5 @@
 import Link from "next/link";
 import "./HomePage.scss";
-// import { Link } from "react-router-dom";
 
 function HomePage() {
   return (

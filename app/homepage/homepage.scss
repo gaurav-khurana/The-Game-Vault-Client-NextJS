@@ -26,11 +26,16 @@
   }
 
   a {
-    text-decoration: none;
+    // text-decoration: none;
     cursor: pointer;
   }
 
   &__text {
     color: $color-primary-green;
+    transition: 1s;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

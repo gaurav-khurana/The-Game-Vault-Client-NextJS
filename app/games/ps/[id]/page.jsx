@@ -2,7 +2,7 @@
 import "./playstationproductdetailspage.scss";
 import Cart from "../../../assets/icons/cart.svg";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GameCarousel from "../../../components/carousel/Carousel";
@@ -219,9 +219,9 @@ function PlaystationProductDetailsPage({ params }) {
               />
             </section>
 
-            <section className="ps-game-carousel">
+            {/* <section className="ps-game-carousel">
               <GameCarousel singleGame={singleGame} />
-            </section>
+            </section> */}
           </section>
         </main>
       </>

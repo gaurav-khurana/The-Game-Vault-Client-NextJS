@@ -92,7 +92,7 @@
 
     &-container {
       margin-left: 2.8rem;
-      margin-bottom: 2.8rem;
+      // margin-bottom: 2.8rem;
 
       @include flexbox(column, flex-start, flex-start);
     }
@@ -119,6 +119,7 @@
       height: 20px;
       width: 20px;
       margin-right: $spacing-small;
+      // outline: $color-primary-blue;
 
       &:checked {
         accent-color: $color-primary-blue;
@@ -201,8 +202,9 @@
       padding: $padding-small $padding-big;
 
       @include desktop {
+        width: 20rem;
         width: 32vw;
-        margin-right: 4rem;
+        // margin-right: 4rem;
       }
 
       &--small {
@@ -211,7 +213,7 @@
         margin-right: 10vw;
 
         @include desktop {
-          width: 20vw;
+          // width: 20vw;
         }
       }
 
