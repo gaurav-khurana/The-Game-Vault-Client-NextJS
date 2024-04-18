@@ -36,7 +36,7 @@
   }
 
   &__title {
-    height: 4rem;
+    height: 6rem;
     color: $color-primary-white;
     text-align: center;
     position: relative;
@@ -46,6 +46,8 @@
     background-color: $color-secondary-dark-grey;
     padding: $spacing-small 0;
     cursor: pointer;
+
+    @include flexbox(row, center, center);
 
     @include desktop {
       width: 50vw;
