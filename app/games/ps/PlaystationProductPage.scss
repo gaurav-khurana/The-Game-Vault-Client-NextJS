@@ -51,6 +51,11 @@
       height: 617px;
       rotate: -23.79deg;
 
+      @include tablet {
+        position: relative;
+        left: 45vw;
+      }
+
       @include desktop {
         position: relative;
         top: -250px;

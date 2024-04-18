@@ -15,6 +15,11 @@
 
 // media queries for desktop
 
+@mixin tablet {
+  @media (min-width: 1140px) {
+    @content;
+  }
+}
 @mixin desktop {
   @media (min-width: $breakpoint-desktop) {
     @content;

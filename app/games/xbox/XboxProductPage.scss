@@ -21,6 +21,10 @@
     );
     border-radius: 16px;
 
+    @include tablet {
+      height: 50vh;
+    }
+
     @include desktop {
       height: 82vh;
       margin-inline: 6.4rem;
@@ -52,6 +56,10 @@
       position: relative;
       left: 25px;
       top: 100px;
+
+      @include tablet {
+        left: 40vw;
+      }
 
       @include desktop {
         height: 38rem;

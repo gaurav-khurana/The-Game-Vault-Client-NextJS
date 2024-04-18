@@ -18,6 +18,10 @@
 
     @include flexbox(row, space-between, flex-start);
 
+    @include tablet {
+      width: 35vw;
+    }
+
     @include desktop {
       width: 35vw;
     }
