@@ -76,7 +76,7 @@ function PlaystationProductDetailsPage({ params }) {
                   <input
                     className="ps-game-price__radio"
                     type="radio"
-                    name="price15days"
+                    name="price"
                     id="price15days"
                   />
                   {singleGame.price_15days} every two weeks
@@ -86,7 +86,7 @@ function PlaystationProductDetailsPage({ params }) {
                   <input
                     className="ps-game-price__radio"
                     type="radio"
-                    name="price30days"
+                    name="price"
                     id="price30days"
                   />
                   {singleGame.price_30days} every four weeks
