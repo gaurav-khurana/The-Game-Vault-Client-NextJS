@@ -13,13 +13,16 @@
   align-items: $align-items;
 }
 
-// media queries for desktop
+// media queries for tablet-landscape mode
 
 @mixin tablet {
   @media (min-width: 1100px) and (max-width: 1278px) {
     @content;
   }
 }
+
+// media queries for desktop
+
 @mixin desktop {
   @media (min-width: $breakpoint-desktop) {
     @content;

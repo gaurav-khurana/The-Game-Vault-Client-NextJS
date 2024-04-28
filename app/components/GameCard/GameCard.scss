@@ -9,8 +9,8 @@
   margin-bottom: $spacing-small;
 
   @include desktop {
-    width: 50vw;
-    width: 49.3vw;
+    // width: 49.3vw;
+    width: 49.1vw;
 
     &:nth-child(odd) {
       margin-right: $spacing-small;
@@ -21,7 +21,6 @@
     width: 100vw;
     height: 40rem;
     object-fit: cover;
-    object-position: 50%;
     object-position: 60%;
     background: linear-gradient(
       179.94deg,
@@ -30,7 +29,6 @@
     );
 
     @include desktop {
-      width: 50vw;
       width: 49.3vw;
     }
   }
@@ -50,7 +48,6 @@
     @include flexbox(row, center, center);
 
     @include desktop {
-      width: 50vw;
       width: 49.3vw;
     }
   }
